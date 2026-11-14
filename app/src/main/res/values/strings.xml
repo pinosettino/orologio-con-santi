@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Orologio Santi</string>
+    <string name="widget_4x2">Orologio 4x2</string>
+    <string name="widget_5x2">Orologio 5x2</string>
+</resources>
