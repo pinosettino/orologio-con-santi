@@ -6,5 +6,4 @@ public class Widget4x2 extends ClockWidget {
     @Override int defaultWidthDp() { return 250; }
     @Override int noteSp() { return 16; }
     @Override int saintMaxSp() { return 15; }
-    @Override int arrowDp() { return 24; }
 }

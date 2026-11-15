@@ -3,7 +3,7 @@ package it.orologiosanti;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/** Stato di ogni widget: di quanti giorni e' spostata la data, pagina dell'appunto, ultimo tocco. */
+/** Stato dei widget: di quanti giorni e' spostata la data, ultimo tocco, colore del testo. */
 final class State {
     private final SharedPreferences sp;
 
@@ -15,34 +15,24 @@ final class State {
         return sp.getInt("off_" + id, 0);
     }
 
-    int page(int id) {
-        return sp.getInt("pag_" + id, 0);
-    }
-
     long touch(int id) {
         return sp.getLong("tocco_" + id, 0L);
     }
 
-    /** true = testo nero, false = testo bianco (predefinito). */
-    boolean nero(int id) {
-        return sp.getBoolean("nero_" + id, false);
-    }
-
-    void setNero(int id, boolean nero) {
-        sp.edit().putBoolean("nero_" + id, nero).apply();
-    }
-
-    void save(int id, int offset, int page, long touch) {
-        sp.edit().putInt("off_" + id, offset).putInt("pag_" + id, page)
-                .putLong("tocco_" + id, touch).apply();
-    }
-
-    void setPage(int id, int page) {
-        sp.edit().putInt("pag_" + id, page).apply();
+    void save(int id, int offset, long touch) {
+        sp.edit().putInt("off_" + id, offset).putLong("tocco_" + id, touch).apply();
     }
 
     void clear(int id) {
-        sp.edit().remove("off_" + id).remove("pag_" + id).remove("tocco_" + id)
-                .remove("nero_" + id).apply();
+        sp.edit().remove("off_" + id).remove("tocco_" + id).apply();
+    }
+
+    /** Colore del testo, uguale per tutti i widget: true = nero, false = bianco (predefinito). */
+    boolean nero() {
+        return sp.getBoolean("tema_nero", false);
+    }
+
+    void setNero(boolean nero) {
+        sp.edit().putBoolean("tema_nero", nero).apply();
     }
 }

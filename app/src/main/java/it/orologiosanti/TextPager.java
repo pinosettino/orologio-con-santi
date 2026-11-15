@@ -57,4 +57,38 @@ final class TextPager {
         }
         return pages;
     }
+
+    /**
+     * Trasforma l'appunto nella sequenza di pezzi da mostrare.
+     * Il marcatore | separa i messaggi: ognuno viene mostrato da solo e, se e' piu' lungo
+     * della riga, a pezzi; solo dopo l'ultimo pezzo passa al messaggio successivo.
+     * Con un solo pezzo lo ripete, cosi' scorre comunque.
+     */
+    static List<String> build(String note, Meter m, float width, int maxPieces) {
+        List<String> out = new ArrayList<String>();
+        if (note == null) {
+            return out;
+        }
+        for (String part : note.split("\\|")) {
+            String msg = part.trim().replaceAll("\\s+", " ");
+            if (msg.length() == 0) {
+                continue;
+            }
+            if (m.width(msg) <= width) {
+                out.add(msg);
+            } else {
+                out.addAll(pages(msg, m, width));
+            }
+            if (out.size() >= maxPieces) {
+                break;
+            }
+        }
+        if (out.size() > maxPieces) {
+            out = new ArrayList<String>(out.subList(0, maxPieces));
+        }
+        if (out.size() == 1) {
+            out.add(out.get(0));
+        }
+        return out;
+    }
 }

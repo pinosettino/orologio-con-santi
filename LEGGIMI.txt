@@ -1,75 +1,76 @@
 OROLOGIO SANTI - widget Android 4x2 e 5x2
 ==========================================
 
-Cosa fa
+COSA FA
 -------
-- ora con secondi, data, santo del giorno e una riga di appunto
-- frecce accanto alla data: giorno precedente / successivo (con santo e appunto di quel giorno)
-- tocco sulla data: torna a oggi (dopo 3 minuti torna a oggi da solo)
-- tocco sull'orologio: tutto il testo passa da bianco a nero e viceversa
-  (sfondo sempre trasparente; la scelta e' separata per ogni widget)
-- tocco sulla riga di appunto: si apre la finestra con la tastiera (solo da oggi in avanti)
-- appunto lungo: compaiono due frecce per leggerlo a pezzi
-- gli appunti dei giorni passati vengono cancellati da soli
-- il 29 febbraio (S. Ilario) compare solo negli anni bisestili
+- ORA a sinistra (senza secondi): toccandola si apre l'app Orologio del telefono
+  (sveglie, timer, cronometro). Funziona con l'app Orologio di qualunque marca.
+- DATA a destra, nel formato "DOM 15 NOV":
+    tocco a sinistra della data  = giorno precedente   (zona invisibile)
+    tocco a destra della data    = giorno successivo   (zona invisibile)
+    tocco sulla data             = torna a oggi
+  Dopo 3 minuti senza tocchi il widget torna da solo a oggi.
+- PROSSIMA SVEGLIA: sotto la data, in piccolo, con l'icona di una sveglia.
+  Si vede solo se c'e' una sveglia impostata. Toccandola si apre l'elenco delle sveglie.
+  L'orario si aggiorna quando Android avvisa del cambio; in caso contrario entro
+  mezz'ora circa.
+- SANTO del giorno, in una riga (si rimpicciolisce se e' lungo).
+- APPUNTO: toccando la riga si apre la finestra con la tastiera (solo da oggi in avanti).
+  L'appunto scorre da solo: ogni pezzo entra da destra, resta fermo 3 secondi
+  ed esce a sinistra. Anche un appunto corto scorre.
+  Il marcatore | separa piu' messaggi:    Dentista 15:30 | Chiamare Marco
+  Ogni messaggio viene mostrato da solo; se e' piu' lungo della riga viene
+  mostrato a pezzi e solo dopo passa al messaggio successivo.
+- Gli appunti dei giorni passati vengono cancellati da soli.
+- Il 29 febbraio (S. Ilario) compare solo negli anni bisestili.
+- COLORE DEL TESTO (bianco o nero): si sceglie aprendo l'app "Orologio Santi"
+  dall'elenco delle app. Vale per tutti i widget. Lo sfondo resta trasparente.
 
-COME OTTENERE L'APK SENZA ANDROID STUDIO (basta il browser)
------------------------------------------------------------
-GitHub compila il progetto per te, gratis, sui suoi computer.
-Su Windows 7 usa un browser recente, per esempio Firefox 115 ESR.
 
-1) Estrai lo ZIP in una cartella (tasto destro > Estrai tutto).
+AGGIORNARE L'APP GIA' INSTALLATA (se hai gia' usato la versione precedente)
+---------------------------------------------------------------------------
+1) Estrai lo ZIP in una cartella.
+2) Su GitHub apri il tuo repository > "Add file" > "Upload files".
+3) Apri la cartella estratta, Ctrl+A per selezionare TUTTO il contenuto e
+   trascinalo nella pagina. I file con lo stesso nome vengono sostituiti.
+   Clicca "Commit changes".
+4) Scheda "Actions": aspetta il pallino verde (circa 5 minuti), apri l'esecuzione,
+   in fondo scarica "OrologioSanti-apk", estrailo e prendi app-debug.apk.
+5) SOLO LA PRIMA VOLTA con questa versione: disinstalla la vecchia app "Orologio Santi"
+   dal telefono prima di installare la nuova (Impostazioni > App > Orologio Santi >
+   Disinstalla). Gli appunti gia' scritti andranno persi e i widget vanno rimessi
+   sulla Home. Da questa versione in poi gli aggiornamenti si installano
+   direttamente sopra la versione precedente, senza perdere nulla.
+6) Installa l'APK e aggiungi i widget dalla Home (Widget > Orologio Santi).
 
-2) Vai su https://github.com e crea un account gratuito (se non ce l'hai).
+Se la compilazione su GitHub e' rossa: clicca sull'esecuzione, poi sul passo in
+rosso, e mandami il testo dell'errore.
 
-3) In alto a destra clicca "+" > "New repository".
-   Nome: orologio-santi    Visibilita': Private va bene.
-   Clicca "Create repository".
 
-4) Nella pagina del repository vuoto clicca il link "uploading an existing file".
+PRIMA INSTALLAZIONE (da zero, senza Android Studio)
+---------------------------------------------------
+1) Estrai lo ZIP. 2) Crea un account gratuito su https://github.com.
+3) "+" > "New repository", nome orologio-santi, Private, "Create repository".
+4) Link "uploading an existing file"; trascina TUTTO il contenuto della cartella
+   estratta; "Commit changes".
+   Se manca la cartella ".github": "Add file" > "Create new file", nome
+   .github/workflows/build.yml, incolla il contenuto del file build.yml
+   (aprilo con il Blocco note) e "Commit changes".
+5) Scheda "Actions": attendi il pallino verde, scarica l'artefatto
+   "OrologioSanti-apk", estrai app-debug.apk.
+6) Copialo sul telefono, consenti l'installazione da origini sconosciute, installa.
+7) Home > tieni premuto > Widget > "Orologio Santi" > "Orologio 4x2" o "5x2".
+   Per il 5x2 serve la griglia a 5 colonne (Impostazioni > Schermata Home >
+   Griglia schermata Home).
 
-5) Apri la cartella estratta, premi Ctrl+A per selezionare TUTTO il suo contenuto
-   e trascinalo nella pagina di GitHub. Aspetta che finisca il caricamento,
-   poi clicca il pulsante verde "Commit changes".
 
-   Controlla che nel repository compaiano: .github, app, gradle, gradlew,
-   gradlew.bat, build.gradle, settings.gradle, gradle.properties.
-   Se manca la cartella ".github":
-     - "Add file" > "Create new file"
-     - come nome scrivi:  .github/workflows/build.yml
-       (scrivendo le barre GitHub crea le cartelle da solo)
-     - apri con il Blocco note il file build.yml (dalla cartella estratta,
-       .github\workflows\build.yml), copia tutto e incollalo nella pagina
-     - clicca "Commit changes"
-
-6) Clicca la scheda "Actions". Se GitHub chiede di abilitarle, conferma.
-   Vedrai "Compila APK" in corso (pallino giallo). Ci vogliono circa 5 minuti.
-   Quando e' verde la compilazione e' riuscita.
-
-   SE E' ROSSA: clicca sul nome dell'esecuzione, poi sul passo in rosso,
-   e mandami il testo dell'errore (o una foto dello schermo). Lo correggo io.
-
-7) Clicca sull'esecuzione verde. In fondo alla pagina, sotto "Artifacts",
-   scarica "OrologioSanti-apk". E' uno ZIP: estrailo, dentro c'e' app-debug.apk.
-
-8) Porta app-debug.apk sul telefono (cavo USB, email o WhatsApp a te stesso).
-   Toccalo dal telefono. Android chiedera' di consentire l'installazione da
-   origini sconosciute per l'app che stai usando: concedi il permesso.
-   Se compare un avviso di Play Protect, scegli "Installa comunque".
-
-9) Tieni premuto su uno spazio vuoto della Home > Widget > "Orologio Santi"
-   e trascina "Orologio 4x2" oppure "Orologio 5x2".
-
-Per il 5x2 serve la griglia della Home a 5 colonne:
-Impostazioni > Schermata Home > Griglia schermata Home.
-
-PER MODIFICARE QUALCOSA IN FUTURO
----------------------------------
-Se ti mando un file corretto, nel repository clicca il file, poi la matita
-(Edit), incolla il nuovo testo e "Commit changes": GitHub ricompila da solo.
-
-DOVE SONO LE COSE (se vuoi cambiare qualcosa)
----------------------------------------------
-- app/src/main/assets/calendario-santi.json   i santi
-- ClockWidget.java, riga "RESET_MS"            dopo quanto torna a oggi (3 minuti)
-- EditActivity.java, riga "MAX_CHARS"          lunghezza massima dell'appunto (300)
+DOVE SONO LE COSE (per modificare qualcosa)
+-------------------------------------------
+- app/src/main/assets/calendario-santi.json        i santi
+- ClockWidget.java, riga "RESET_MS"                dopo quanto torna a oggi (3 minuti)
+- EditActivity.java, riga "MAX_CHARS"              lunghezza massima dell'appunto (300)
+- res/layout/widget_4x2.xml, widget_4x2_nero.xml,
+  widget_5x2.xml, widget_5x2_nero.xml
+  riga android:flipInterval="3000"                 pausa tra un pezzo e l'altro (millisecondi)
+- res/anim/note_in.xml e note_out.xml              durata dello scorrimento (500 millisecondi)
+- Dates.java                                       abbreviazioni dei giorni e dei mesi

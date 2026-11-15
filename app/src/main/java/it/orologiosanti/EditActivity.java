@@ -64,7 +64,7 @@ public class EditActivity extends Activity {
         input.setHorizontallyScrolling(false);
         input.setMaxLines(4);
         input.setFilters(new InputFilter[]{new InputFilter.LengthFilter(MAX_CHARS)});
-        input.setHint("Scrivi qui l'appunto (una riga)");
+        input.setHint("Scrivi qui. Usa | per separare piu' messaggi");
         input.setText(NotesDb.get(this).getNote(key));
         input.setSelection(input.getText().length());
         input.setOnEditorActionListener(new TextView.OnEditorActionListener() {

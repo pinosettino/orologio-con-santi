@@ -8,6 +8,10 @@ import java.util.Locale;
 final class Dates {
     private Dates() {}
 
+    static final String[] GIORNI = {"DOM", "LUN", "MAR", "MER", "GIO", "VEN", "SAB"};
+    private static final String[] MESI = {"GEN", "FEB", "MAR", "APR", "MAG", "GIU",
+            "LUG", "AGO", "SET", "OTT", "NOV", "DIC"};
+
     /** Oggi alle 00:00. */
     static Calendar today() {
         Calendar c = new GregorianCalendar();
@@ -45,5 +49,11 @@ final class Dates {
     static String label(Calendar c) {
         return String.format(Locale.US, "%02d %02d %04d",
                 c.get(Calendar.DAY_OF_MONTH), c.get(Calendar.MONTH) + 1, c.get(Calendar.YEAR));
+    }
+
+    /** Testo della data nel widget, es. "DOM 15 NOV" (senza anno). */
+    static String widgetLabel(Calendar c) {
+        return GIORNI[c.get(Calendar.DAY_OF_WEEK) - 1] + " "
+                + c.get(Calendar.DAY_OF_MONTH) + " " + MESI[c.get(Calendar.MONTH)];
     }
 }

@@ -7,19 +7,22 @@ import android.appwidget.AppWidgetProvider;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
+import android.os.Build;
+import android.provider.AlarmClock;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.RemoteViews;
 
 import java.util.Calendar;
-import java.util.Collections;
+import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Logica comune dei widget (4x2 e 5x2).
@@ -31,22 +34,33 @@ public abstract class ClockWidget extends AppWidgetProvider {
     static final String A_PREV = PREFIX + "PREV";        // giorno precedente
     static final String A_NEXT = PREFIX + "NEXT";        // giorno successivo
     static final String A_TODAY = PREFIX + "TODAY";      // torna a oggi
-    static final String A_NOTE_PREV = PREFIX + "NPREV";  // pezzo precedente dell'appunto
-    static final String A_NOTE_NEXT = PREFIX + "NNEXT";  // pezzo successivo dell'appunto
     static final String A_RESET = PREFIX + "RESET";      // ritorno automatico a oggi
-    static final String A_THEME = PREFIX + "TEMA";       // alterna testo bianco / nero
 
     /** Dopo questo tempo senza tocchi, il widget torna da solo a oggi (3 minuti). */
     static final long RESET_MS = 3L * 60L * 1000L;
     static final int MAX_OFFSET = 3660;
     static final int MIN_SP = 11;
-    static final int PAD_DP = 10;   // deve coincidere con il padding nei layout
+    static final int PAD_DP = 10;       // deve coincidere con il padding nei layout
+    static final int MAX_PIECES = 30;   // massimo di pezzi dell'appunto
+
+    /** App Orologio piu' comuni, usate se il telefono non risponde al comando standard. */
+    private static final String[] CLOCK_PACKAGES = {
+            "com.sec.android.app.clockpackage",
+            "com.google.android.deskclock",
+            "com.android.deskclock",
+            "com.coloros.alarmclock",
+            "com.oplus.alarmclock",
+            "com.oneplus.deskclock",
+            "com.android.BBKClock",
+            "com.asus.deskclock",
+            "com.lge.clock",
+            "com.htc.android.worldclock",
+            "com.motorola.blur.alarmclock"};
 
     abstract int layoutRes(boolean nero);
     abstract int defaultWidthDp();
     abstract int noteSp();
     abstract int saintMaxSp();
-    abstract int arrowDp();         // larghezza delle frecce dell'appunto (come nel layout)
 
     // ------------------------------------------------------------------ ciclo di vita
 
@@ -92,41 +106,27 @@ public abstract class ClockWidget extends AppWidgetProvider {
 
     private void handle(Context ctx, String action, int id) {
         State st = new State(ctx);
-        if (A_THEME.equals(action)) {
-            st.setNero(id, !st.nero(id));
-            update(ctx, AppWidgetManager.getInstance(ctx), id);
-            return;
-        }
         int off = st.offset(id);
-        int page = st.page(id);
         long now = System.currentTimeMillis();
         boolean userTouch = true;
 
         if (A_PREV.equals(action)) {
             off = Math.max(-MAX_OFFSET, off - 1);
-            page = 0;
         } else if (A_NEXT.equals(action)) {
             off = Math.min(MAX_OFFSET, off + 1);
-            page = 0;
         } else if (A_TODAY.equals(action)) {
             off = 0;
-            page = 0;
-        } else if (A_NOTE_PREV.equals(action)) {
-            page--;
-        } else if (A_NOTE_NEXT.equals(action)) {
-            page++;
         } else if (A_RESET.equals(action)) {
             userTouch = false;
             if (off != 0 && now - st.touch(id) >= RESET_MS - 5000L) {
                 off = 0;
-                page = 0;
             } else {
                 // allarme arrivato in anticipo o widget gia' a oggi: non cambia nulla
                 update(ctx, AppWidgetManager.getInstance(ctx), id);
                 return;
             }
         }
-        st.save(id, off, page, userTouch ? now : st.touch(id));
+        st.save(id, off, userTouch ? now : st.touch(id));
         if (userTouch && off != 0) {
             scheduleReset(ctx, id);
         }
@@ -166,16 +166,15 @@ public abstract class ClockWidget extends AppWidgetProvider {
         State st = new State(ctx);
         long now = System.currentTimeMillis();
         int off = st.offset(id);
-        int page = st.page(id);
         if (off != 0 && now - st.touch(id) > RESET_MS + 60000L) {
             off = 0;                         // rete di sicurezza se l'allarme e' andato perso
-            page = 0;
-            st.save(id, 0, 0, now);
+            st.save(id, 0, now);
         }
+        boolean nero = st.nero();
 
         Calendar shown = Dates.plusDays(today, off);
         String key = Dates.key(shown);
-        String dateText = Dates.label(shown);
+        String dateText = Dates.widgetLabel(shown);
         String saint = Saints.get(ctx, shown.get(Calendar.MONTH), shown.get(Calendar.DAY_OF_MONTH));
         String note = off < 0 ? "" : db.getNote(key);
 
@@ -190,7 +189,6 @@ public abstract class ClockWidget extends AppWidgetProvider {
             }
         }
         float fullPx = dp(dm, widthDp - 2 * PAD_DP) * 0.95f;
-        float pagedPx = dp(dm, widthDp - 2 * PAD_DP - 2 * arrowDp()) * 0.95f;
 
         final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setTypeface(Typeface.DEFAULT);
@@ -205,7 +203,7 @@ public abstract class ClockWidget extends AppWidgetProvider {
             saintSp--;
         }
 
-        // appunto: una riga, oppure piu' pezzi con le frecce
+        // appunto: pezzi che scorrono da soli
         paint.setTextSize(sp(dm, noteSp()));
         TextPager.Meter meter = new TextPager.Meter() {
             @Override
@@ -218,43 +216,45 @@ public abstract class ClockWidget extends AppWidgetProvider {
                 return paint.breakText(s, true, maxWidth, null);
             }
         };
-        List<String> pages;
-        boolean multi = false;
-        if (note.length() == 0) {
-            pages = Collections.singletonList("");
-        } else if (meter.width(note) <= fullPx) {
-            pages = Collections.singletonList(note);
-        } else {
-            pages = TextPager.pages(note, meter, pagedPx);
-            multi = pages.size() > 1;
-            if (pages.isEmpty()) {
-                pages = Collections.singletonList("");
-            }
-        }
-        int n = pages.size();
-        page = ((page % n) + n) % n;
-        st.setPage(id, page);
+        List<String> pieces = TextPager.build(note, meter, fullPx, MAX_PIECES);
 
         // costruzione del widget
-        RemoteViews rv = new RemoteViews(ctx.getPackageName(), layoutRes(st.nero(id)));
+        RemoteViews rv = new RemoteViews(ctx.getPackageName(), layoutRes(nero));
         rv.setTextViewText(R.id.date, dateText);
         rv.setTextViewText(R.id.saint, saint);
         rv.setTextViewTextSize(R.id.saint, TypedValue.COMPLEX_UNIT_SP, saintSp);
-        rv.setTextViewText(R.id.note, pages.get(page));
-        rv.setTextViewTextSize(R.id.note, TypedValue.COMPLEX_UNIT_SP, noteSp());
-        int arrows = multi ? View.VISIBLE : View.GONE;
-        rv.setViewVisibility(R.id.note_prev, arrows);
-        rv.setViewVisibility(R.id.note_next, arrows);
 
-        PendingIntent theme = selfBroadcast(ctx, id, A_THEME);   // tocco sull'orologio: cambia tema
-        rv.setOnClickPendingIntent(R.id.clock_box, theme);
-        rv.setOnClickPendingIntent(R.id.clock_time, theme);
-        rv.setOnClickPendingIntent(R.id.clock_sec, theme);
-        rv.setOnClickPendingIntent(R.id.date_prev, selfBroadcast(ctx, id, A_PREV));
-        rv.setOnClickPendingIntent(R.id.date_next, selfBroadcast(ctx, id, A_NEXT));
+        rv.removeAllViews(R.id.note_flipper);
+        for (String piece : pieces) {
+            RemoteViews item = new RemoteViews(ctx.getPackageName(),
+                    nero ? R.layout.note_piece_nero : R.layout.note_piece);
+            item.setTextViewText(R.id.note_piece, piece);
+            item.setTextViewTextSize(R.id.note_piece, TypedValue.COMPLEX_UNIT_SP, noteSp());
+            rv.addView(R.id.note_flipper, item);
+        }
+
+        // prossima sveglia (sotto la data)
+        String alarm = nextAlarmText(ctx);
+        if (alarm != null) {
+            rv.setTextViewText(R.id.alarm_text, alarm);
+            rv.setViewVisibility(R.id.alarm_row, View.VISIBLE);
+        } else {
+            rv.setViewVisibility(R.id.alarm_row, View.GONE);
+        }
+
+        // tocchi: zone invisibili ai lati della data, data, orologio, riga dell'appunto
+        rv.setOnClickPendingIntent(R.id.zone_prev, selfBroadcast(ctx, id, A_PREV));
+        rv.setOnClickPendingIntent(R.id.zone_next, selfBroadcast(ctx, id, A_NEXT));
         rv.setOnClickPendingIntent(R.id.date, selfBroadcast(ctx, id, A_TODAY));
-        rv.setOnClickPendingIntent(R.id.note_prev, selfBroadcast(ctx, id, A_NOTE_PREV));
-        rv.setOnClickPendingIntent(R.id.note_next, selfBroadcast(ctx, id, A_NOTE_NEXT));
+
+        Intent clock = clockIntent(ctx);
+        if (clock != null) {
+            clock.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            PendingIntent pi = PendingIntent.getActivity(ctx, id, clock, pendingFlags());
+            rv.setOnClickPendingIntent(R.id.clock_time, pi);
+            rv.setOnClickPendingIntent(R.id.alarm_row, pi);
+        }
+
         if (off >= 0) {
             // si possono scrivere appunti solo per oggi e per i giorni futuri
             Intent edit = new Intent(ctx, EditActivity.class);
@@ -268,7 +268,50 @@ public abstract class ClockWidget extends AppWidgetProvider {
         mgr.updateAppWidget(id, rv);
     }
 
-    // ------------------------------------------------------------------ allarmi
+    // ------------------------------------------------------------------ sveglia e app Orologio
+
+    /** Orario della prossima sveglia (letto dal sistema), oppure null se non ce ne sono. */
+    private static String nextAlarmText(Context ctx) {
+        AlarmManager am = (AlarmManager) ctx.getSystemService(Context.ALARM_SERVICE);
+        if (am == null) {
+            return null;
+        }
+        AlarmManager.AlarmClockInfo info = am.getNextAlarmClock();
+        if (info == null) {
+            return null;
+        }
+        long trigger = info.getTriggerTime();
+        Calendar t = new GregorianCalendar();
+        t.setTimeInMillis(trigger);
+        String hm = String.format(Locale.US, "%02d:%02d",
+                t.get(Calendar.HOUR_OF_DAY), t.get(Calendar.MINUTE));
+        boolean within24h = trigger - System.currentTimeMillis() < 24L * 60L * 60L * 1000L;
+        if (within24h) {
+            return hm;
+        }
+        return Dates.GIORNI[t.get(Calendar.DAY_OF_WEEK) - 1] + " " + hm;
+    }
+
+    /**
+     * Comando standard "mostra le sveglie": lo gestisce l'app Orologio predefinita del telefono,
+     * qualunque marca sia. Se non risponde, prova ad aprire una delle app Orologio note.
+     */
+    private static Intent clockIntent(Context ctx) {
+        PackageManager pm = ctx.getPackageManager();
+        Intent show = new Intent(AlarmClock.ACTION_SHOW_ALARMS);
+        if (pm.resolveActivity(show, 0) != null) {
+            return show;
+        }
+        for (String p : CLOCK_PACKAGES) {
+            Intent launch = pm.getLaunchIntentForPackage(p);
+            if (launch != null) {
+                return launch;
+            }
+        }
+        return null;
+    }
+
+    // ------------------------------------------------------------------ allarmi interni
 
     /** Aggiorna i widget poco dopo la mezzanotte, per cambiare data e santo. */
     static void scheduleMidnight(Context ctx) {
