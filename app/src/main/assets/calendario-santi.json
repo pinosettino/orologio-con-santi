@@ -1,3 +1,4 @@
+
 [
   {
     "mese": "Gennaio",
@@ -12,17 +13,17 @@
   {
     "mese": "Gennaio",
     "giorno": 3,
-    "santo": "Santa Genoveffa"
+    "santo": "S. Genoveffa"
   },
   {
     "mese": "Gennaio",
     "giorno": 4,
-    "santo": "SS. Nome del Signore"
+    "santo": "S. Angela da Foligno"
   },
   {
     "mese": "Gennaio",
     "giorno": 5,
-    "santo": "Sant'Amelia"
+    "santo": "S. Amelia"
   },
   {
     "mese": "Gennaio",
@@ -52,7 +53,7 @@
   {
     "mese": "Gennaio",
     "giorno": 11,
-    "santo": "Battesimo del Signore"
+    "santo": "S. Igino papa"
   },
   {
     "mese": "Gennaio",
@@ -62,7 +63,7 @@
   {
     "mese": "Gennaio",
     "giorno": 13,
-    "santo": "Sant'Ilario"
+    "santo": "S. Ilario"
   },
   {
     "mese": "Gennaio",
@@ -82,12 +83,12 @@
   {
     "mese": "Gennaio",
     "giorno": 17,
-    "santo": "Sant'Antonio abate"
+    "santo": "S. Antonio abate"
   },
   {
     "mese": "Gennaio",
     "giorno": 18,
-    "santo": "Santa Liberata, Santa Prisca"
+    "santo": "S. Liberata, S. Prisca"
   },
   {
     "mese": "Gennaio",
@@ -102,17 +103,17 @@
   {
     "mese": "Gennaio",
     "giorno": 21,
-    "santo": "Sant'Agnese"
+    "santo": "S. Agnese"
   },
   {
     "mese": "Gennaio",
     "giorno": 22,
-    "santo": "S. Vincenzo, Sant'Anastasio"
+    "santo": "S. Vincenzo, S. Anastasio"
   },
   {
     "mese": "Gennaio",
     "giorno": 23,
-    "santo": "Santa Emerenziana"
+    "santo": "S. Emerenziana"
   },
   {
     "mese": "Gennaio",
@@ -122,7 +123,7 @@
   {
     "mese": "Gennaio",
     "giorno": 25,
-    "santo": "Conversione di S. Paolo"
+    "santo": "Conversione di San Paolo"
   },
   {
     "mese": "Gennaio",
@@ -132,7 +133,7 @@
   {
     "mese": "Gennaio",
     "giorno": 27,
-    "santo": "Sant'Angela Merici"
+    "santo": "S. Angela Merici"
   },
   {
     "mese": "Gennaio",
@@ -147,7 +148,7 @@
   {
     "mese": "Gennaio",
     "giorno": 30,
-    "santo": "Santa Martina"
+    "santo": "S. Martina"
   },
   {
     "mese": "Gennaio",
@@ -157,12 +158,12 @@
   {
     "mese": "Febbraio",
     "giorno": 1,
-    "santo": "S. Severo, Santa Verdiana"
+    "santo": "S. Severo, S. Verdiana"
   },
   {
     "mese": "Febbraio",
     "giorno": 2,
-    "santo": "Presentazione del Signore (Candelora)"
+    "santo": "Presentazione del Signore"
   },
   {
     "mese": "Febbraio",
@@ -177,7 +178,7 @@
   {
     "mese": "Febbraio",
     "giorno": 5,
-    "santo": "Sant'Agata"
+    "santo": "S. Agata"
   },
   {
     "mese": "Febbraio",
@@ -197,12 +198,12 @@
   {
     "mese": "Febbraio",
     "giorno": 9,
-    "santo": "Santa Apollonia"
+    "santo": "S. Apollonia"
   },
   {
     "mese": "Febbraio",
     "giorno": 10,
-    "santo": "Santa Scolastica"
+    "santo": "S. Scolastica"
   },
   {
     "mese": "Febbraio",
@@ -212,12 +213,12 @@
   {
     "mese": "Febbraio",
     "giorno": 12,
-    "santo": "Santa Eulalia"
+    "santo": "S. Eulalia"
   },
   {
     "mese": "Febbraio",
     "giorno": 13,
-    "santo": "Santa Fosca, Santa Maura"
+    "santo": "S. Fosca, S. Maura"
   },
   {
     "mese": "Febbraio",
@@ -232,7 +233,7 @@
   {
     "mese": "Febbraio",
     "giorno": 16,
-    "santo": "Santa Giuliana"
+    "santo": "S. Giuliana"
   },
   {
     "mese": "Febbraio",
@@ -242,27 +243,27 @@
   {
     "mese": "Febbraio",
     "giorno": 18,
-    "santo": "Mercoledì delle Ceneri"
+    "santo": "S. Simeone vescovo"
   },
   {
     "mese": "Febbraio",
     "giorno": 19,
-    "santo": "Sant'Alvaro, S. Mansueto"
+    "santo": "S. Alvaro, S. Mansueto"
   },
   {
     "mese": "Febbraio",
     "giorno": 20,
-    "santo": "Sant'Eleuterio, S. Zenobio"
+    "santo": "S. Eleuterio, S. Zenobio"
   },
   {
     "mese": "Febbraio",
     "giorno": 21,
-    "santo": "Santa Eleonora, S. Pier Damiani"
+    "santo": "S. Eleonora, S. Pier Damiani"
   },
   {
     "mese": "Febbraio",
     "giorno": 22,
-    "santo": "I Domenica di Quaresima"
+    "santo": "Cattedra di San Pietro apostolo"
   },
   {
     "mese": "Febbraio",
@@ -302,17 +303,17 @@
   {
     "mese": "Marzo",
     "giorno": 1,
-    "santo": "II Domenica di Quaresima"
+    "santo": "S. Albino vescovo"
   },
   {
     "mese": "Marzo",
     "giorno": 2,
-    "santo": "Sant'Eraclio, S. Basilio martire"
+    "santo": "S. Eraclio, S. Basilio"
   },
   {
     "mese": "Marzo",
     "giorno": 3,
-    "santo": "Santa Cunegonda, S. Tiziano"
+    "santo": "S. Cunegonda, S. Tiziano"
   },
   {
     "mese": "Marzo",
@@ -332,17 +333,17 @@
   {
     "mese": "Marzo",
     "giorno": 7,
-    "santo": "Santa Perpetua e Felicita"
+    "santo": "S. Perpetua e Felicita"
   },
   {
     "mese": "Marzo",
     "giorno": 8,
-    "santo": "III Domenica di Quaresima"
+    "santo": "S. Giovanni di Dio"
   },
   {
     "mese": "Marzo",
     "giorno": 9,
-    "santo": "Santa Francesca Romana"
+    "santo": "S. Francesca Romana"
   },
   {
     "mese": "Marzo",
@@ -362,22 +363,22 @@
   {
     "mese": "Marzo",
     "giorno": 13,
-    "santo": "Sant'Arrigo, Santa Eufrasia"
+    "santo": "S. Arrigo, S. Eufrasia"
   },
   {
     "mese": "Marzo",
     "giorno": 14,
-    "santo": "Santa Matilde regina"
+    "santo": "S. Matilde regina"
   },
   {
     "mese": "Marzo",
     "giorno": 15,
-    "santo": "IV Domenica di Quaresima"
+    "santo": "S. Luisa de Marillac"
   },
   {
     "mese": "Marzo",
     "giorno": 16,
-    "santo": "Sant'Ariberto"
+    "santo": "S. Ariberto"
   },
   {
     "mese": "Marzo",
@@ -392,12 +393,12 @@
   {
     "mese": "Marzo",
     "giorno": 19,
-    "santo": "S. Giuseppe"
+    "santo": "San Giuseppe"
   },
   {
     "mese": "Marzo",
     "giorno": 20,
-    "santo": "Santa Claudia, S. Alessandra martire"
+    "santo": "S. Claudia, S. Alessandra martire"
   },
   {
     "mese": "Marzo",
@@ -407,7 +408,7 @@
   {
     "mese": "Marzo",
     "giorno": 22,
-    "santo": "V Domenica di Quaresima"
+    "santo": "S. Benvenuto Scotivoli"
   },
   {
     "mese": "Marzo",
@@ -442,7 +443,7 @@
   {
     "mese": "Marzo",
     "giorno": 29,
-    "santo": "Le Palme"
+    "santo": "S. Eustasio abate"
   },
   {
     "mese": "Marzo",
@@ -457,7 +458,7 @@
   {
     "mese": "Aprile",
     "giorno": 1,
-    "santo": "Sant'Ugo di Grenoble (vescovo)"
+    "santo": "S. Ugo di Grenoble vescovo"
   },
   {
     "mese": "Aprile",
@@ -472,32 +473,32 @@
   {
     "mese": "Aprile",
     "giorno": 4,
-    "santo": "Sant'Isidoro"
+    "santo": "S. Isidoro"
   },
   {
     "mese": "Aprile",
     "giorno": 5,
-    "santo": "Pasqua"
+    "santo": "S. Vincenzo Ferrer"
   },
   {
     "mese": "Aprile",
     "giorno": 6,
-    "santo": "Lunedì dell'Angelo"
+    "santo": "S. Celestino papa"
   },
   {
     "mese": "Aprile",
     "giorno": 7,
-    "santo": "Sant'Ermanno, S. Giovanni B. de La Salle"
+    "santo": "S. Ermanno, S. Giovanni de La Salle"
   },
   {
     "mese": "Aprile",
     "giorno": 8,
-    "santo": "Sant'Alberto Dionigi"
+    "santo": "S. Alberto Dionigi"
   },
   {
     "mese": "Aprile",
     "giorno": 9,
-    "santo": "S. Gualtiero, Santa Maria Cleofe"
+    "santo": "S. Gualtiero, S. Maria Cleofe"
   },
   {
     "mese": "Aprile",
@@ -517,7 +518,7 @@
   {
     "mese": "Aprile",
     "giorno": 13,
-    "santo": "Sant'Ermenegildo, S. Martino Papa"
+    "santo": "S. Ermenegildo, S. Martino Papa"
   },
   {
     "mese": "Aprile",
@@ -527,17 +528,17 @@
   {
     "mese": "Aprile",
     "giorno": 15,
-    "santo": "Sant'Annibale martire"
+    "santo": "S. Annibale martire"
   },
   {
     "mese": "Aprile",
     "giorno": 16,
-    "santo": "Santa Bernadetta, S. Lamberto"
+    "santo": "S. Bernadetta, S. Lamberto"
   },
   {
     "mese": "Aprile",
     "giorno": 17,
-    "santo": "Sant'Aniceto Papa, S. Roberto"
+    "santo": "S. Aniceto Papa, S. Roberto"
   },
   {
     "mese": "Aprile",
@@ -547,17 +548,17 @@
   {
     "mese": "Aprile",
     "giorno": 19,
-    "santo": "Santa Emma, S. Timone"
+    "santo": "S. Emma, S. Timone"
   },
   {
     "mese": "Aprile",
     "giorno": 20,
-    "santo": "Santa Adalgisa, S. Teotimo"
+    "santo": "S. Adalgisa, S. Teotimo"
   },
   {
     "mese": "Aprile",
     "giorno": 21,
-    "santo": "Sant'Anselmo"
+    "santo": "S. Anselmo"
   },
   {
     "mese": "Aprile",
@@ -567,7 +568,7 @@
   {
     "mese": "Aprile",
     "giorno": 23,
-    "santo": "Sant'Adalberto, S. Giorgio martire"
+    "santo": "S. Adalberto, S. Giorgio martire"
   },
   {
     "mese": "Aprile",
@@ -592,12 +593,12 @@
   {
     "mese": "Aprile",
     "giorno": 28,
-    "santo": "Santa Valeria"
+    "santo": "S. Valeria"
   },
   {
     "mese": "Aprile",
     "giorno": 29,
-    "santo": "Santa Caterina da Siena"
+    "santo": "S. Caterina da Siena"
   },
   {
     "mese": "Aprile",
@@ -607,12 +608,12 @@
   {
     "mese": "Maggio",
     "giorno": 1,
-    "santo": "S. Giuseppe artigiano / Festa dei Lavoratori"
+    "santo": "S. Giuseppe artigiano"
   },
   {
     "mese": "Maggio",
     "giorno": 2,
-    "santo": "Sant'Atanasio"
+    "santo": "S. Atanasio"
   },
   {
     "mese": "Maggio",
@@ -632,12 +633,12 @@
   {
     "mese": "Maggio",
     "giorno": 6,
-    "santo": "Santa Giuditta"
+    "santo": "S. Giuditta"
   },
   {
     "mese": "Maggio",
     "giorno": 7,
-    "santo": "Santa Flavia"
+    "santo": "S. Flavia"
   },
   {
     "mese": "Maggio",
@@ -652,7 +653,7 @@
   {
     "mese": "Maggio",
     "giorno": 10,
-    "santo": "Sant'Antonino"
+    "santo": "S. Antonino"
   },
   {
     "mese": "Maggio",
@@ -682,12 +683,12 @@
   {
     "mese": "Maggio",
     "giorno": 16,
-    "santo": "Sant'Ubaldo"
+    "santo": "S. Ubaldo"
   },
   {
     "mese": "Maggio",
     "giorno": 17,
-    "santo": "Ascensione del Signore"
+    "santo": "S. Pasquale Baylon"
   },
   {
     "mese": "Maggio",
@@ -712,7 +713,7 @@
   {
     "mese": "Maggio",
     "giorno": 22,
-    "santo": "Santa Rita da Cascia"
+    "santo": "S. Rita da Cascia"
   },
   {
     "mese": "Maggio",
@@ -722,7 +723,7 @@
   {
     "mese": "Maggio",
     "giorno": 24,
-    "santo": "Pentecoste"
+    "santo": "Beata Vergine Maria Ausiliatrice"
   },
   {
     "mese": "Maggio",
@@ -737,12 +738,12 @@
   {
     "mese": "Maggio",
     "giorno": 27,
-    "santo": "Sant'Agostino"
+    "santo": "S. Agostino di Canterbury"
   },
   {
     "mese": "Maggio",
     "giorno": 28,
-    "santo": "Sant'Emilio martire"
+    "santo": "S. Emilio martire"
   },
   {
     "mese": "Maggio",
@@ -752,7 +753,7 @@
   {
     "mese": "Maggio",
     "giorno": 30,
-    "santo": "Santa Giovanna d'Arco"
+    "santo": "S. Giovanna d'Arco"
   },
   {
     "mese": "Maggio",
@@ -767,7 +768,7 @@
   {
     "mese": "Giugno",
     "giorno": 2,
-    "santo": "Ss. Marcellino / Festa della Repubblica"
+    "santo": "Ss. Marcellino e Pietro"
   },
   {
     "mese": "Giugno",
@@ -792,7 +793,7 @@
   {
     "mese": "Giugno",
     "giorno": 7,
-    "santo": "SS. Corpo e Sangue di Cristo - Corpus Domini"
+    "santo": "S. Antonio Maria Gianelli"
   },
   {
     "mese": "Giugno",
@@ -802,7 +803,7 @@
   {
     "mese": "Giugno",
     "giorno": 9,
-    "santo": "Sant'Efrem Siro, Ss. Primo e Feliciano"
+    "santo": "S. Efrem, Ss. Primo e Feliciano"
   },
   {
     "mese": "Giugno",
@@ -817,17 +818,17 @@
   {
     "mese": "Giugno",
     "giorno": 12,
-    "santo": "Sacro Cuore di Gesù"
+    "santo": "S. Onofrio"
   },
   {
     "mese": "Giugno",
     "giorno": 13,
-    "santo": "Cuore immacolato di Maria"
+    "santo": "S. Antonio di Padova"
   },
   {
     "mese": "Giugno",
     "giorno": 14,
-    "santo": "Sant'Eliseo"
+    "santo": "S. Eliseo"
   },
   {
     "mese": "Giugno",
@@ -837,7 +838,7 @@
   {
     "mese": "Giugno",
     "giorno": 16,
-    "santo": "Sant'Aureliano"
+    "santo": "S. Aureliano"
   },
   {
     "mese": "Giugno",
@@ -847,17 +848,17 @@
   {
     "mese": "Giugno",
     "giorno": 18,
-    "santo": "Santa Marina"
+    "santo": "S. Marina"
   },
   {
     "mese": "Giugno",
     "giorno": 19,
-    "santo": "Ss. Gervasio e Protasio, S. Romualdo"
+    "santo": "S. Gervasio e Protasio, S. Romualdo"
   },
   {
     "mese": "Giugno",
     "giorno": 20,
-    "santo": "Sant'Ettore, S. Silverio Papa"
+    "santo": "S. Ettore, S. Silverio Papa"
   },
   {
     "mese": "Giugno",
@@ -887,7 +888,7 @@
   {
     "mese": "Giugno",
     "giorno": 26,
-    "santo": "Ss. Giovanni e Paolo martiri, S. Rodolfo"
+    "santo": "Ss. Giovanni e Paolo, S. Rodolfo"
   },
   {
     "mese": "Giugno",
@@ -912,12 +913,12 @@
   {
     "mese": "Luglio",
     "giorno": 1,
-    "santo": "S. Teobaldo, Sant'Aronne"
+    "santo": "S. Teobaldo, S. Aronne"
   },
   {
     "mese": "Luglio",
     "giorno": 2,
-    "santo": "Sant'Ottone, S. Urbano"
+    "santo": "S. Ottone, S. Urbano"
   },
   {
     "mese": "Luglio",
@@ -927,17 +928,17 @@
   {
     "mese": "Luglio",
     "giorno": 4,
-    "santo": "Santa Elisabetta regina"
+    "santo": "S. Elisabetta regina"
   },
   {
     "mese": "Luglio",
     "giorno": 5,
-    "santo": "Sant'Antonio Maria Zaccaria"
+    "santo": "S. Antonio Maria Zaccaria"
   },
   {
     "mese": "Luglio",
     "giorno": 6,
-    "santo": "Santa Maria Goretti"
+    "santo": "S. Maria Goretti"
   },
   {
     "mese": "Luglio",
@@ -947,17 +948,17 @@
   {
     "mese": "Luglio",
     "giorno": 8,
-    "santo": "Sant'Adriano"
+    "santo": "S. Adriano"
   },
   {
     "mese": "Luglio",
     "giorno": 9,
-    "santo": "S. Fabrizio, Santa Veronica Giuliani"
+    "santo": "S. Fabrizio, S. Veronica Giuliani"
   },
   {
     "mese": "Luglio",
     "giorno": 10,
-    "santo": "Santa Felicita, Santa Vittoria"
+    "santo": "S. Felicita, S. Vittoria"
   },
   {
     "mese": "Luglio",
@@ -972,7 +973,7 @@
   {
     "mese": "Luglio",
     "giorno": 13,
-    "santo": "Sant'Enrico imperatore"
+    "santo": "S. Enrico imperatore"
   },
   {
     "mese": "Luglio",
@@ -992,7 +993,7 @@
   {
     "mese": "Luglio",
     "giorno": 17,
-    "santo": "Sant'Alessio confessore"
+    "santo": "S. Alessio confessore"
   },
   {
     "mese": "Luglio",
@@ -1002,12 +1003,12 @@
   {
     "mese": "Luglio",
     "giorno": 19,
-    "santo": "Santa Giusta"
+    "santo": "S. Giusta"
   },
   {
     "mese": "Luglio",
     "giorno": 20,
-    "santo": "Sant'Elia profeta, Sant'Apollinare"
+    "santo": "S. Elia profeta, S. Apollinare"
   },
   {
     "mese": "Luglio",
@@ -1017,17 +1018,17 @@
   {
     "mese": "Luglio",
     "giorno": 22,
-    "santo": "Santa Maria Maddalena"
+    "santo": "S. Maria Maddalena"
   },
   {
     "mese": "Luglio",
     "giorno": 23,
-    "santo": "Santa Brigida"
+    "santo": "S. Brigida"
   },
   {
     "mese": "Luglio",
     "giorno": 24,
-    "santo": "Santa Cristina"
+    "santo": "S. Cristina"
   },
   {
     "mese": "Luglio",
@@ -1042,7 +1043,7 @@
   {
     "mese": "Luglio",
     "giorno": 27,
-    "santo": "Santa Liliana"
+    "santo": "S. Liliana"
   },
   {
     "mese": "Luglio",
@@ -1052,7 +1053,7 @@
   {
     "mese": "Luglio",
     "giorno": 29,
-    "santo": "Santa Marta"
+    "santo": "S. Marta"
   },
   {
     "mese": "Luglio",
@@ -1062,22 +1063,22 @@
   {
     "mese": "Luglio",
     "giorno": 31,
-    "santo": "Sant'Ignazio di Loyola"
+    "santo": "S. Ignazio di Loyola"
   },
   {
     "mese": "Agosto",
     "giorno": 1,
-    "santo": "Sant'Alfonso M. de Liguori"
+    "santo": "S. Alfonso M. de Liguori"
   },
   {
     "mese": "Agosto",
     "giorno": 2,
-    "santo": "Sant'Eusebio"
+    "santo": "S. Eusebio"
   },
   {
     "mese": "Agosto",
     "giorno": 3,
-    "santo": "Santa Lidia"
+    "santo": "S. Lidia"
   },
   {
     "mese": "Agosto",
@@ -1117,12 +1118,12 @@
   {
     "mese": "Agosto",
     "giorno": 11,
-    "santo": "Santa Chiara d'Assisi"
+    "santo": "S. Chiara d'Assisi"
   },
   {
     "mese": "Agosto",
     "giorno": 12,
-    "santo": "Sant'Ercolano"
+    "santo": "S. Ercolano"
   },
   {
     "mese": "Agosto",
@@ -1132,7 +1133,7 @@
   {
     "mese": "Agosto",
     "giorno": 14,
-    "santo": "Sant'Alfredo, S. Massimiliano Kolbe"
+    "santo": "S. Alfredo, S. Massimiliano Kolbe"
   },
   {
     "mese": "Agosto",
@@ -1152,7 +1153,7 @@
   {
     "mese": "Agosto",
     "giorno": 18,
-    "santo": "Santa Elena imperatrice"
+    "santo": "S. Elena imperatrice"
   },
   {
     "mese": "Agosto",
@@ -1192,17 +1193,17 @@
   {
     "mese": "Agosto",
     "giorno": 26,
-    "santo": "Sant'Alessandro martire"
+    "santo": "S. Alessandro martire"
   },
   {
     "mese": "Agosto",
     "giorno": 27,
-    "santo": "Santa Monica"
+    "santo": "S. Monica"
   },
   {
     "mese": "Agosto",
     "giorno": 28,
-    "santo": "Sant'Agostino"
+    "santo": "S. Agostino"
   },
   {
     "mese": "Agosto",
@@ -1212,22 +1213,22 @@
   {
     "mese": "Agosto",
     "giorno": 30,
-    "santo": "Santa Faustina"
+    "santo": "S. Faustina"
   },
   {
     "mese": "Agosto",
     "giorno": 31,
-    "santo": "Sant'Aristide"
+    "santo": "S. Aristide"
   },
   {
     "mese": "Settembre",
     "giorno": 1,
-    "santo": "Sant'Egidio"
+    "santo": "S. Egidio"
   },
   {
     "mese": "Settembre",
     "giorno": 2,
-    "santo": "Sant'Elpidio vescovo"
+    "santo": "S. Elpidio vescovo"
   },
   {
     "mese": "Settembre",
@@ -1237,7 +1238,7 @@
   {
     "mese": "Settembre",
     "giorno": 4,
-    "santo": "Santa Rosalia"
+    "santo": "S. Rosalia"
   },
   {
     "mese": "Settembre",
@@ -1247,12 +1248,12 @@
   {
     "mese": "Settembre",
     "giorno": 6,
-    "santo": "Sant'Umberto"
+    "santo": "S. Umberto"
   },
   {
     "mese": "Settembre",
     "giorno": 7,
-    "santo": "Santa Regina"
+    "santo": "S. Regina"
   },
   {
     "mese": "Settembre",
@@ -1307,7 +1308,7 @@
   {
     "mese": "Settembre",
     "giorno": 18,
-    "santo": "Santa Sofia martire"
+    "santo": "S. Sofia martire"
   },
   {
     "mese": "Settembre",
@@ -1317,7 +1318,7 @@
   {
     "mese": "Settembre",
     "giorno": 20,
-    "santo": "Sant'Eustachio"
+    "santo": "S. Eustachio"
   },
   {
     "mese": "Settembre",
@@ -1342,7 +1343,7 @@
   {
     "mese": "Settembre",
     "giorno": 25,
-    "santo": "Santa Aurelia"
+    "santo": "S. Aurelia"
   },
   {
     "mese": "Settembre",
@@ -1362,7 +1363,7 @@
   {
     "mese": "Settembre",
     "giorno": 29,
-    "santo": "Ss. Michele, Gabriele, Raffaele arcangeli"
+    "santo": "Ss. Michele, Gabriele, Raffaele"
   },
   {
     "mese": "Settembre",
@@ -1372,7 +1373,7 @@
   {
     "mese": "Ottobre",
     "giorno": 1,
-    "santo": "Santa Teresa di Gesù Bambino"
+    "santo": "S. Teresa di Gesù Bambino"
   },
   {
     "mese": "Ottobre",
@@ -1432,7 +1433,7 @@
   {
     "mese": "Ottobre",
     "giorno": 13,
-    "santo": "Sant'Edoardo re"
+    "santo": "S. Edoardo re"
   },
   {
     "mese": "Ottobre",
@@ -1442,17 +1443,17 @@
   {
     "mese": "Ottobre",
     "giorno": 15,
-    "santo": "Santa Teresa d'Avila"
+    "santo": "S. Teresa d'Avila"
   },
   {
     "mese": "Ottobre",
     "giorno": 16,
-    "santo": "Santa Edvige"
+    "santo": "S. Edvige"
   },
   {
     "mese": "Ottobre",
     "giorno": 17,
-    "santo": "Sant'Ignazio d'Antiochia"
+    "santo": "S. Ignazio d'Antiochia"
   },
   {
     "mese": "Ottobre",
@@ -1467,17 +1468,17 @@
   {
     "mese": "Ottobre",
     "giorno": 20,
-    "santo": "Sant'Irene"
+    "santo": "S. Irene"
   },
   {
     "mese": "Ottobre",
     "giorno": 21,
-    "santo": "Sant'Orsola e compagne"
+    "santo": "S. Orsola e compagne"
   },
   {
     "mese": "Ottobre",
     "giorno": 22,
-    "santo": "S. Donato, Santa Maria Salomè"
+    "santo": "S. Donato, S. Maria Salomè"
   },
   {
     "mese": "Ottobre",
@@ -1492,12 +1493,12 @@
   {
     "mese": "Ottobre",
     "giorno": 25,
-    "santo": "N.S. Gesù Re dell'Universo"
+    "santo": "Ss. Crispino e Crispiniano"
   },
   {
     "mese": "Ottobre",
     "giorno": 26,
-    "santo": "Sant'Evaristo Papa"
+    "santo": "S. Evaristo Papa"
   },
   {
     "mese": "Ottobre",
@@ -1522,7 +1523,7 @@
   {
     "mese": "Ottobre",
     "giorno": 31,
-    "santo": "Santa Lucilla"
+    "santo": "S. Lucilla"
   },
   {
     "mese": "Novembre",
@@ -1537,7 +1538,7 @@
   {
     "mese": "Novembre",
     "giorno": 3,
-    "santo": "Santa Silvia"
+    "santo": "S. Silvia"
   },
   {
     "mese": "Novembre",
@@ -1557,7 +1558,7 @@
   {
     "mese": "Novembre",
     "giorno": 7,
-    "santo": "Sant'Ernesto"
+    "santo": "S. Ernesto"
   },
   {
     "mese": "Novembre",
@@ -1567,7 +1568,7 @@
   {
     "mese": "Novembre",
     "giorno": 9,
-    "santo": "Sant'Oreste"
+    "santo": "S. Oreste"
   },
   {
     "mese": "Novembre",
@@ -1607,12 +1608,12 @@
   {
     "mese": "Novembre",
     "giorno": 17,
-    "santo": "Santa Elisabetta di Ungheria"
+    "santo": "S. Elisabetta di Ungheria"
   },
   {
     "mese": "Novembre",
     "giorno": 18,
-    "santo": "Sant'Oddone"
+    "santo": "S. Oddone"
   },
   {
     "mese": "Novembre",
@@ -1622,7 +1623,7 @@
   {
     "mese": "Novembre",
     "giorno": 20,
-    "santo": "S. Felice di Valois, Sant'Ottavio"
+    "santo": "S. Felice di Valois, S. Ottavio"
   },
   {
     "mese": "Novembre",
@@ -1632,7 +1633,7 @@
   {
     "mese": "Novembre",
     "giorno": 22,
-    "santo": "Santa Cecilia"
+    "santo": "S. Cecilia"
   },
   {
     "mese": "Novembre",
@@ -1642,12 +1643,12 @@
   {
     "mese": "Novembre",
     "giorno": 24,
-    "santo": "S. Giovanni della Croce"
+    "santo": "Ss. Andrea Dung Lac"
   },
   {
     "mese": "Novembre",
     "giorno": 25,
-    "santo": "Santa Caterina di Alessandria"
+    "santo": "S. Caterina di Alessandria"
   },
   {
     "mese": "Novembre",
@@ -1662,17 +1663,17 @@
   {
     "mese": "Novembre",
     "giorno": 28,
-    "santo": "Santa Livia, S. Demetrio"
+    "santo": "S. Livia, S. Demetrio"
   },
   {
     "mese": "Novembre",
     "giorno": 29,
-    "santo": "I Domenica di Avvento"
+    "santo": "S. Saturnino vescovo"
   },
   {
     "mese": "Novembre",
     "giorno": 30,
-    "santo": "Sant'Andrea apostolo"
+    "santo": "S. Andrea apostolo"
   },
   {
     "mese": "Dicembre",
@@ -1682,7 +1683,7 @@
   {
     "mese": "Dicembre",
     "giorno": 2,
-    "santo": "Santa Bibiana"
+    "santo": "S. Bibiana"
   },
   {
     "mese": "Dicembre",
@@ -1692,7 +1693,7 @@
   {
     "mese": "Dicembre",
     "giorno": 4,
-    "santo": "Santa Barbara"
+    "santo": "S. Barbara"
   },
   {
     "mese": "Dicembre",
@@ -1702,12 +1703,12 @@
   {
     "mese": "Dicembre",
     "giorno": 6,
-    "santo": "II Domenica di Avvento"
+    "santo": "S. Nicola di Bari"
   },
   {
     "mese": "Dicembre",
     "giorno": 7,
-    "santo": "Sant'Ambrogio vescovo"
+    "santo": "S. Ambrogio vescovo"
   },
   {
     "mese": "Dicembre",
@@ -1732,12 +1733,12 @@
   {
     "mese": "Dicembre",
     "giorno": 12,
-    "santo": "Santa Giovanna"
+    "santo": "S. Giovanna"
   },
   {
     "mese": "Dicembre",
     "giorno": 13,
-    "santo": "III Domenica di Avvento"
+    "santo": "S. Lucia"
   },
   {
     "mese": "Dicembre",
@@ -1752,7 +1753,7 @@
   {
     "mese": "Dicembre",
     "giorno": 16,
-    "santo": "Santa Adelaide"
+    "santo": "S. Adelaide"
   },
   {
     "mese": "Dicembre",
@@ -1767,12 +1768,12 @@
   {
     "mese": "Dicembre",
     "giorno": 19,
-    "santo": "S. Dario, Santa Fausta"
+    "santo": "S. Dario, S. Fausta"
   },
   {
     "mese": "Dicembre",
     "giorno": 20,
-    "santo": "IV Domenica di Avvento"
+    "santo": "S. Domenico di Silos"
   },
   {
     "mese": "Dicembre",
@@ -1792,7 +1793,7 @@
   {
     "mese": "Dicembre",
     "giorno": 24,
-    "santo": "Santa Irma"
+    "santo": "Vigilia di Natale"
   },
   {
     "mese": "Dicembre",
@@ -1802,7 +1803,7 @@
   {
     "mese": "Dicembre",
     "giorno": 26,
-    "santo": "S. Stefano - Sacra Famiglia"
+    "santo": "S. Stefano protomartire"
   },
   {
     "mese": "Dicembre",
@@ -1822,7 +1823,7 @@
   {
     "mese": "Dicembre",
     "giorno": 30,
-    "santo": "Sant'Eugenio vescovo"
+    "santo": "S. Eugenio vescovo"
   },
   {
     "mese": "Dicembre",

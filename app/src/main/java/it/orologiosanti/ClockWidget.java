@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Logica comune dei widget (4x2 e 5x2).
+ * Logica comune dei widget (4x2, 5x2 e 5x3).
  * Le differenze (layout, dimensioni dei caratteri) stanno nelle sottoclassi.
  */
 public abstract class ClockWidget extends AppWidgetProvider {
@@ -141,6 +141,7 @@ public abstract class ClockWidget extends AppWidgetProvider {
         AppWidgetManager mgr = AppWidgetManager.getInstance(app);
         updateClass(app, mgr, new Widget4x2());
         updateClass(app, mgr, new Widget5x2());
+        updateClass(app, mgr, new Widget5x3());
     }
 
     private static void updateClass(Context ctx, AppWidgetManager mgr, ClockWidget w) {
@@ -216,7 +217,13 @@ public abstract class ClockWidget extends AppWidgetProvider {
                 return paint.breakText(s, true, maxWidth, null);
             }
         };
-        List<String> pieces = TextPager.build(note, meter, fullPx, MAX_PIECES);
+        // il messaggio fisso (valido ogni giorno) si accoda all'appunto del giorno
+        String fixed = FixedNote.get(ctx);
+        String all = note;
+        if (fixed.length() > 0) {
+            all = note.length() > 0 ? note + "#" + fixed : fixed;
+        }
+        List<String> pieces = TextPager.build(all, meter, fullPx, MAX_PIECES);
 
         // costruzione del widget
         RemoteViews rv = new RemoteViews(ctx.getPackageName(), layoutRes(nero));

@@ -38,40 +38,65 @@
             android:gravity="end"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end|center_vertical"
-                android:orientation="horizontal">
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-                <!-- zona invisibile a sinistra della data: giorno precedente -->
-                <ImageView
-                    android:id="@+id/zone_prev"
-                    android:layout_width="28dp"
-                    android:layout_height="38dp"
-                    android:contentDescription="Giorno precedente" />
-
-                <TextView
-                    android:id="@+id/date"
+                <!-- livello sotto: la data, con ai lati lo spazio per le zone -->
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:includeFontPadding="false"
-                    android:shadowColor="#99FFFFFF"
-                    android:shadowDx="1"
-                    android:shadowDy="1"
-                    android:shadowRadius="3"
-                    android:singleLine="true"
-                    android:textColor="#000000"
-                    android:textSize="19sp"
-                    android:textStyle="bold" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-                <!-- zona invisibile a destra della data: giorno successivo -->
-                <ImageView
-                    android:id="@+id/zone_next"
-                    android:layout_width="22dp"
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="38dp" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:shadowColor="#99FFFFFF"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="3"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="38dp" />
+                </LinearLayout>
+
+                <!-- livello sopra: zone da toccare (invisibili) che sconfinano di 10dp sopra la data;
+                     il centro della data resta libero e tocca "oggi" -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="38dp"
-                    android:contentDescription="Giorno successivo" />
-            </LinearLayout>
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/zone_prev"
+                        android:layout_width="38dp"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Giorno precedente" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/zone_next"
+                        android:layout_width="32dp"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Giorno successivo" />
+                </LinearLayout>
+            </FrameLayout>
 
             <!-- prossima sveglia: piccola, sotto la data, allineata a destra con la data -->
             <LinearLayout
@@ -112,6 +137,7 @@
         android:id="@+id/saint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:ellipsize="end"
         android:includeFontPadding="false"
         android:shadowColor="#99FFFFFF"
@@ -127,6 +153,7 @@
         android:id="@+id/note_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:minHeight="34dp">
 
         <ViewFlipper

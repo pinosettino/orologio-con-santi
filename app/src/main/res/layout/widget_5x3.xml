@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Widget 5x3: orologio a sinistra, data a destra (con la sveglia sotto), santo, appunto che scorre -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="4dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextClock
+            android:id="@+id/clock_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:format12Hour="HH:mm"
+            android:format24Hour="HH:mm"
+            android:includeFontPadding="false"
+            android:shadowColor="#AA000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:textColor="#FFFFFF"
+            android:textSize="58sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- livello sotto: la data, con ai lati lo spazio per le zone -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="38dp" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:shadowColor="#AA000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="3"
+                        android:singleLine="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="38dp" />
+                </LinearLayout>
+
+                <!-- livello sopra: zone da toccare (invisibili) che sconfinano di 10dp sopra la data;
+                     il centro della data resta libero e tocca "oggi" -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/zone_prev"
+                        android:layout_width="38dp"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Giorno precedente" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/zone_next"
+                        android:layout_width="32dp"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Giorno successivo" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- prossima sveglia: piccola, sotto la data, allineata a destra con la data -->
+            <LinearLayout
+                android:id="@+id/alarm_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="22dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/alarm_icon"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginRight="3dp"
+                    android:contentDescription="Prossima sveglia"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_alarm" />
+
+                <TextView
+                    android:id="@+id/alarm_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:shadowColor="#AA000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="3"
+                    android:singleLine="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/saint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:shadowColor="#AA000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:singleLine="true"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <!-- riga dell'appunto: i pezzi vengono aggiunti dal codice e girano da soli ogni 3 secondi -->
+    <FrameLayout
+        android:id="@+id/note_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:minHeight="46dp">
+
+        <ViewFlipper
+            android:id="@+id/note_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:autoStart="true"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/note_in"
+            android:outAnimation="@anim/note_out" />
+    </FrameLayout>
+</LinearLayout>

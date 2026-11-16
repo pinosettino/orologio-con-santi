@@ -60,7 +60,7 @@ final class TextPager {
 
     /**
      * Trasforma l'appunto nella sequenza di pezzi da mostrare.
-     * Il marcatore | separa i messaggi: ognuno viene mostrato da solo e, se e' piu' lungo
+     * Il marcatore # separa i messaggi (accettato anche il vecchio |): ognuno viene mostrato da solo e, se e' piu' lungo
      * della riga, a pezzi; solo dopo l'ultimo pezzo passa al messaggio successivo.
      * Con un solo pezzo lo ripete, cosi' scorre comunque.
      */
@@ -69,7 +69,7 @@ final class TextPager {
         if (note == null) {
             return out;
         }
-        for (String part : note.split("\\|")) {
+        for (String part : note.split("[#|]")) {
             String msg = part.trim().replaceAll("\\s+", " ");
             if (msg.length() == 0) {
                 continue;

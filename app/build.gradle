@@ -10,8 +10,8 @@ android {
         applicationId "it.orologiosanti"
         minSdk 21
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
     }
 
     // Chiave di firma fissa: cosi' ogni nuovo APK si installa sopra quello vecchio
