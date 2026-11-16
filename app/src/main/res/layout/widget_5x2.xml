@@ -72,30 +72,21 @@
                         android:layout_height="38dp" />
                 </LinearLayout>
 
-                <!-- livello sopra: zone da toccare (invisibili) che sconfinano di 10dp sopra la data;
-                     il centro della data resta libero e tocca "oggi" -->
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <!-- zone da toccare (invisibili), agganciate ai due bordi della data: sconfinano di 10dp
+                     sopra la data. Il centro della data resta libero e tocca "oggi". -->
+                <ImageView
+                    android:id="@+id/zone_prev"
+                    android:layout_width="38dp"
                     android:layout_height="38dp"
-                    android:orientation="horizontal">
+                    android:layout_gravity="left|center_vertical"
+                    android:contentDescription="Giorno precedente" />
 
-                    <ImageView
-                        android:id="@+id/zone_prev"
-                        android:layout_width="38dp"
-                        android:layout_height="match_parent"
-                        android:contentDescription="Giorno precedente" />
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
-
-                    <ImageView
-                        android:id="@+id/zone_next"
-                        android:layout_width="32dp"
-                        android:layout_height="match_parent"
-                        android:contentDescription="Giorno successivo" />
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/zone_next"
+                    android:layout_width="32dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:contentDescription="Giorno successivo" />
             </FrameLayout>
 
             <!-- prossima sveglia: piccola, sotto la data, allineata a destra con la data -->
